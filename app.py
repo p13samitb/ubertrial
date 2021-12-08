@@ -17,7 +17,7 @@ def load_data(nrows):
     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
     return data
 
-rows = int(st.text_input('How many rows you want to extract?'))
+rows = int(st.text_input('How many rows you want to extract?',5000))
 data_load_state = st.text('Loading data...')
 data = load_data(rows)
 data_load_state.text("Done! (using st.cache)")
